@@ -1,0 +1,165 @@
+<head>
+    <style>
+        .introduzione {
+            background-color: lightgray;
+            padding: 2px;
+        }
+        .lista {
+            border: 1px solid black;
+        }
+        .musica {
+            background-color: lightgray;
+        }
+
+        .mappa {
+            background-color: lightgray;
+        }
+        .sport {
+            background-color: green;
+        }
+        .passione {
+            background-color: yellow;
+        }
+        .passione2 {
+            background-color: red;
+        }
+        .pulsante {
+            border: 1px solid black;
+            padding: 5px;
+            margin-top: 15px;
+        }
+        .titoletto {
+            padding: 10px;
+            cursor: pointer;
+        }
+         .scorre {
+             animation: cambioColori 3s infinite;
+
+         }
+
+         #mappa {
+             display: none;
+         }
+          #video {
+              display: none;
+          }
+         @keyframes cambioColori {
+             0% {color: black;}
+             25% {color: yellow;}
+             50% {color: red;}
+             75% {color: aqua;}
+             100% {color: black;}
+         }
+
+         .riferimenti {
+             background-color: lightgray;
+             display: flex;
+             justify-content: space-evenly;
+             padding: 20px;
+         }
+
+         .descrizione {
+             background-color: aqua;
+         }
+
+         .bio {
+             padding: 10px;
+         }
+        footer {
+            margin-top: 40px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+     <header class="introduzione"> 
+         <h1>Francesco Fornara</h1>
+         <h3>Studente</h3>
+         <marquee class="scorre">Forza Doria</marquee>
+        </header>
+     <main>
+         <ul class="lista">
+             <b>Anagrafica</b>
+             <li>Data di Nascita:10/11/2006</li>
+             <li>Luogo di Nascita:Milano</li>
+             <li>Residenza:Milano</li>
+             <li>Altezza:1.72</li>
+         </ul>
+         <div class="descrizione">
+             <h5 class="titoletto">Bio <i class="fa fa-thumbs-up"></i></h5>
+             <p class="bio">
+                 a me piace il calcio il basket e giocare ai videogiochi 
+             </p>
+         </div>
+         <div class="Musica">
+             <h5 id="musica" class="titoletto" onclick="appari()">Musica <i class="fa fa-music"></i></h5>
+               <div id="video">
+             <iframe width="560" height="315" src="https://www.youtube.com/embed/CocEMWdc7Ck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+         </div>
+         <div class="mappa">
+                <h5 class="titoletto" onclick="appariMappa()">Scuola <i class="fa fa-map-marker"></i></h5>
+                <div id="mappa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.15880654677!2d9.159182715324585!3d45.466604779100905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c15d89f12605%3A0x9db1d898b229e544!2sFondazione%20Cova!5e0!3m2!1sit!2sit!4v1674563541186!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+         </div>
+         <div class="Sport">
+            <h6>Sport</h6>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ncHZBdWrztU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+       <div class="Passione">
+              <h6>Passione</h6>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/Vrg4KlKnKoY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+       </div> 
+       <div class="Passione2">
+        <h6>Passione 2</h6>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/X0Wp6o6yPF0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+ </div> 
+     </main>
+     <footer>
+         <!--span>
+             <a class="Pulsante" href="francesco.fornara.edu@scuolacova.it">Contattami</a>
+         </span -->
+         <div class="riferimenti">
+            <a  href="francesco.fornara.edu@scuolacova.it">
+             <i class="fa fa-instagram"></i>
+            </a> 
+            <a  href="francesco.fornara.edu@scuolacova.it">
+             <i class="fa fa-facebook"></i>
+            </a>
+             <a  href="francesco.fornara.edu@scuolacova.it">
+             <i class="fa fa-envelope-o"></i>
+              </a>
+         </div>
+     </footer>
+
+   <script>
+          console.log ("funziono");
+
+          var b=0;
+
+          function appariMappa() {
+             if (b == 0) {
+             document.getElementById ("mappa").style.display = "initial";
+             b=1;
+          }
+              else if (b == 1) {
+                  document.getElementById ("mappa").style.display = "none"; 
+                  b = 0;
+              }
+
+            }
+        var a=0;
+
+        function appari() {
+            if (a== 0) {
+                document.getElementById("video").style.display ="none";   
+                a= 1;
+            }
+           else if (a == 1) {
+            document.getElementById("video").style.display ="initial";  
+            a = 0;
+           }
+        }
+   </script>  
+</body>
